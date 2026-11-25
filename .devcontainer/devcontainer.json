@@ -1,6 +1,13 @@
 {
-  "name": "ROS 2 Humble Classroom",
+  "name": "ROS 2 Humble Turtlesim",
   "image": "osrf/ros:humble-desktop",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "containerEnv": {
+    "DISPLAY": ":1"
+  },
+  "forwardPorts": [6080],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,5 +16,5 @@
       ]
     }
   },
-  "postCreateCommand": "sudo apt update && sudo apt install -y python3-colcon-common-extensions && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
+  "postCreateCommand": "sudo apt update && sudo apt install -y python3-colcon-common-extensions ros-humble-turtlesim && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
 }
