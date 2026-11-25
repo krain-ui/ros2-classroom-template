@@ -1,0 +1,13 @@
+{
+  "name": "ROS 2 Humble Classroom",
+  "image": "osrf/ros:humble-desktop",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ranch-hand-robotics.rde-ros-2"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install -y python3-colcon-common-extensions && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
+}
